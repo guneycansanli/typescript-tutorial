@@ -1,20 +1,29 @@
-var character = 'test';
-var age = 30;
-var isBlackBelt = false;
-//Let can not chance to another type
-//character = 2;
-character = 'luigi';
-//age can not be string
-//age = '2';
-age = 40;
-//isBlackBelt must be boolen
-//isBlackBelt = 'yes';
-isBlackBelt = true;
-//Ts can access all libraryies from JS Math is JS library and TS can use it
-//Diameter must be number
-var circ = function (diameter) {
-    return diameter * Math.PI;
+//arrays
+var names = ["mario", "luigi", "yoshi"];
+//names array is string array, We can not push int to it
+//names.push(3);
+//names[0] = 3;
+names.push("toad");
+var numbers = [1, 2, 3];
+numbers.push(2);
+//numbers.push('test');
+var mixed = ["ken", 2, "chun-li", 51];
+mixed.push(2);
+mixed.push("ryu");
+mixed[0] = 1;
+//objects
+var ninja = {
+    name: 'mario',
+    belt: 'black',
+    age: 30
 };
-//It will return NaN (Not a Number)
-//console.log(circ("hello"));
-console.log(circ(7.5));
+ninja.age = 17;
+ninja.name = 'ryu';
+//ninja.name = 30;
+//ninja.skill = ['test','test'];
+ninja = {
+    name: 'mario',
+    belt: 'black',
+    age: 30,
+    //    skills: [""]
+};
