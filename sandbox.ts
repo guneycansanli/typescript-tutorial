@@ -1,37 +1,49 @@
+//explicit types
+let number: number;
+let character: string;
+let isLoggedIn: boolean;
+
+//can not be string because We define it explicitly number
+//number = 'mario';
+number = 1;
+isLoggedIn = false;
+character = 'mario';
+
+
 //arrays
-let names = ["mario", "luigi", "yoshi"];
+let ninjas: string[] = [];
 
-//names array is string array, We can not push int to it
-//names.push(3);
-//names[0] = 3;
-names.push("toad");
+//ninjas = [10,25];
+// we can not oush beacuse array is not a variable now  when it is like : let ninjas: string[];
+ninjas.push('mario');
 
-let numbers = [1 ,2, 3];
-numbers.push(2);
-//numbers.push('test');
 
-let mixed = ["ken", 2, "chun-li", 51];
-mixed.push(2);
-mixed.push("ryu");
-mixed[0] = 1;
+//union types
+let mixed: (string|number|boolean) [] = [];
+mixed.push('ryu');
+mixed.push(20);
+mixed.push(false);
+console.log(mixed);
+
+let uid: string|number;
+
+uid = 'ryu';
+uid = 20;
+//uid = false;
+
 
 
 //objects
 
-let ninja = {
-    name: 'mario',
-    belt: 'black',
-    age: 30
-}
+let ninjaOne: object;
+ninjaOne = {name: 'yoshi', age:30};
+//it waorks beacuse object is an array
+//ninjaOne = [];
 
-ninja.age = 17;
-ninja.name='ryu';
-//ninja.name = 30;
-//ninja.skill = ['test','test'];
-
-ninja = {
-    name: 'mario',
-    belt: 'black',
-    age: 30,
-//    skills: [""]
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColor: string
 };
+
+ninjaTwo = {name: 'ryu',age: 30, beltColor:'black' };

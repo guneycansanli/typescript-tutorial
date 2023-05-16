@@ -1,29 +1,31 @@
+//explicit types
+var number;
+var character;
+var isLoggedIn;
+//can not be string because We define it explicitly number
+//number = 'mario';
+number = 1;
+isLoggedIn = false;
+character = 'mario';
 //arrays
-var names = ["mario", "luigi", "yoshi"];
-//names array is string array, We can not push int to it
-//names.push(3);
-//names[0] = 3;
-names.push("toad");
-var numbers = [1, 2, 3];
-numbers.push(2);
-//numbers.push('test');
-var mixed = ["ken", 2, "chun-li", 51];
-mixed.push(2);
-mixed.push("ryu");
-mixed[0] = 1;
+var ninjas = [];
+//ninjas = [10,25];
+// we can not oush beacuse array is not a variable now  when it is like : let ninjas: string[];
+ninjas.push('mario');
+//union types
+var mixed = [];
+mixed.push('ryu');
+mixed.push(20);
+mixed.push(false);
+console.log(mixed);
+var uid;
+uid = 'ryu';
+uid = 20;
+//uid = false;
 //objects
-var ninja = {
-    name: 'mario',
-    belt: 'black',
-    age: 30
-};
-ninja.age = 17;
-ninja.name = 'ryu';
-//ninja.name = 30;
-//ninja.skill = ['test','test'];
-ninja = {
-    name: 'mario',
-    belt: 'black',
-    age: 30,
-    //    skills: [""]
-};
+var ninjaOne;
+ninjaOne = { name: 'yoshi', age: 30 };
+//it waorks beacuse object is an array
+//ninjaOne = [];
+var ninjaTwo;
+ninjaTwo = { name: 'ryu', age: 30, beltColor: 'black' };
