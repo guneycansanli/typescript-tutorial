@@ -1,49 +1,22 @@
-//explicit types
-let number: number;
-let character: string;
-let isLoggedIn: boolean;
+//any type
 
-//can not be string because We define it explicitly number
-//number = 'mario';
-number = 1;
-isLoggedIn = false;
-character = 'mario';
+let age: any = 25;
 
-
-//arrays
-let ninjas: string[] = [];
-
-//ninjas = [10,25];
-// we can not oush beacuse array is not a variable now  when it is like : let ninjas: string[];
-ninjas.push('mario');
+age = true;
+console.log(age);
+age = 'test';
+console.log(age);
+age = 30;
+console.log(age);
 
 
-//union types
-let mixed: (string|number|boolean) [] = [];
-mixed.push('ryu');
-mixed.push(20);
-mixed.push(false);
+let mixed: any[] = [];
+
+mixed.push(5);
+mixed.push('test');
+mixed.push(true);
 console.log(mixed);
 
-let uid: string|number;
+let ninja: {name: any, age: any};
 
-uid = 'ryu';
-uid = 20;
-//uid = false;
-
-
-
-//objects
-
-let ninjaOne: object;
-ninjaOne = {name: 'yoshi', age:30};
-//it waorks beacuse object is an array
-//ninjaOne = [];
-
-let ninjaTwo: {
-    name: string,
-    age: number,
-    beltColor: string
-};
-
-ninjaTwo = {name: 'ryu',age: 30, beltColor:'black' };
+ninja = {name: 'test', age:30 };
